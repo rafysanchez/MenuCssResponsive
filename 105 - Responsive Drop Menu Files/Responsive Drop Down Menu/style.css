@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	font-size:22px;
+	line-height: 32px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	}
+.toggle,
+[id^=drop] {
+	display: none;
+}
+nav { 
+	margin:0;
+	padding: 0;
+	background-color: #01579B;
+}
+#logo {
+	display: block;
+	padding: 10px 0 0 30px;
+	float: left;
+}
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+}
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+}
+nav a {
+	display:block;
+	padding:14px 20px;	
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+nav a:hover { 
+	background-color: #3378af; 
+}
+img.banner {
+	width: 100%;
+}
+@media (max-width :768px) {
+	#logo {
+		display: block;
+		padding: 20px 0 10px 0;
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
+	nav {
+		margin: 0;
+	}
+	nav ul {
+		float: left;
+		width: 100%;
+	}
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+	.toggle {
+		display: block;
+		background-color: #00457c;
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px;
+		text-decoration:none;
+		border:none;
+		cursor: pointer;
+	}
+	.toggle:hover {
+		background-color: #003c6c;
+	}
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+	nav ul li {
+		display: block;
+		width: 100%;
+		}
+	nav a:hover{
+		background-color: #3378af;
+	}
+}
